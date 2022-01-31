@@ -114,7 +114,6 @@ async function login() {
             await pages[0].waitForTimeout(5000)
 
             do {
-                console.log('tam');
                 await metamask.sign()
                 console.log(`[${(getDate())}] Signing`);
                 await page.waitForTimeout(5000)
