@@ -77,6 +77,11 @@ async function main() {
     await page.waitForTimeout(15000)
     await page.setCacheEnabled(false);
 
+    await moveAndClick(298, 470)
+    await page.waitForTimeout(1000)
+    await moveAndClick(530, 545)
+    await page.waitForTimeout(1000)
+
     await page.screenshot({ path: 'start.png' })
     let ready = await findButton(CONNECT_WALLET_TEST, 'start.png')
     if (ready) {
